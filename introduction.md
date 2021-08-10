@@ -1,5 +1,4 @@
 ---
-permalink: /
 description: Getting to know the relevant concepts in heap exploitation.
 ---
 
