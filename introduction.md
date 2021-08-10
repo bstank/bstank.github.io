@@ -1,7 +1,3 @@
----
-description: Getting to know the relevant concepts in heap exploitation.
----
-
 # Introduction
 
 This site is an explanation of *heap exploits*, in particular the heap
