@@ -35,9 +35,12 @@ a program calls malloc for the first time, one of the aforementioned system
 calls is used to a get a large chunk of memory, which can then be parceled out
 to the application in chunks.
 
-[^1]: This is distinct from the data structure. A memory heap could be
+[^1]:
+    This is distinct from the data structure. A memory heap could be
     implemented with a heap, but doesn't have to be.
-[^2]: Library functions are standard pieces of code that are available widely.
+
+[^2]:
+    Library functions are standard pieces of code that are available widely.
 
 ## What Could Go Wrong?
 
