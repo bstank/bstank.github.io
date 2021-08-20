@@ -36,7 +36,7 @@ calls is used to a get a large chunk of memory, which can then be parceled out
 to the application in chunks.
 
 [^1]: This is distinct from the data structure. A memory heap could be
-implemented with a heap, but doesn't have to be.
+    implemented with a heap, but doesn't have to be.
 [^2]: Library functions are standard pieces of code that are available widely.
 
 ## What Could Go Wrong?
@@ -45,7 +45,7 @@ Heap systems need to store information about the chunks of memory they have
 given out and gotten back to the user (such as the size of the chunk). This
 information is often stored *inline* (before, after, or at the start of the
 block allocated from the system, in general) with the chunks of memory that are
-given to the user. If this information is corrupted[^2], then many different
+given to the user. If this information is corrupted, then many different
 things can go wrong; in the worst case, a malicious user can inject their own
 code to be executed.
 
