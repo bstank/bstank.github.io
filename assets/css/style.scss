@@ -110,5 +110,9 @@ main {
         &:visited {
             color: var(--body-h2);
         }
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
