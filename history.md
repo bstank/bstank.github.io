@@ -1,14 +1,16 @@
 # History
+
 There's a fair bit of history behind the glibc heap. The relevant parts are
 summarised here.
 
 ## dlmalloc 
+
 The GNU libc used, for a fair while, a heap called *dlmalloc*, written by Doug
 Lea. Exploits for this malloc interface were well documented in Phrack,
-especially the two articles *Vudo malloc tricks* and  *Once upon a free()*, both
-in the 57th issue. The main idea at the time was to exploit a macro used in the
-freeing of chunks called `unlink()`, which allowed an attacker to write
-an arbitrary address to another arbitrary address[^1].
+especially by the two articles *Vudo malloc tricks* and  *Once upon a free()*,
+both in the 57th issue. The main idea at the time was to exploit a macro used in
+the freeing of chunks called `unlink()`, which allowed an attacker to write an
+arbitrary address to another arbitrary address[^1].
 
 [^1]:
     This was not entirely arbitrary if the memory was not read-writable.
