@@ -10,4 +10,4 @@
 3. [Chunk layout overview](layout)
 
 ## Exploits (WIP)
-1. [The dlmalloc `unlink` exploit](#)
+1. [The `unlink` exploit](#)
