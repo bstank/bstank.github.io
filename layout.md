@@ -6,6 +6,7 @@ glibc 2.34[^1].
     The `nextsize` pointers are not in all versions, but they are fairly
     inconsequential for our purposes.
 
+
     struct malloc_chunk {
       INTERNAL_SIZE_T prev_size; /* Size of previous chunk (if free). */
       INTERNAL_SIZE_T size;      /* Size in bytes, including overhead. */
@@ -28,6 +29,7 @@ allocated (in use).
 
 [^3]:
     Whether the chunk is mmapped.
+
 
     start of chunk  -> +----------------------------------------+
                        | Size of previous chunk if it is free   |
