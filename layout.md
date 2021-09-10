@@ -45,6 +45,10 @@ Free chunks[^4] are stored in doubly-linked lists, like this:
                        .                                        .
     start of next   -> +----------------------------------------+
 
+If you're experienced with exploitation, hopefully you're thinking about what
+happens when these pointers get changed: find out what you can do with the
+[unlink](unlink) exploit.
+
 [^1]:
     The `nextsize` pointers are not in all versions, but they are fairly
     inconsequential for our purposes.
