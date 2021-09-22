@@ -70,6 +70,21 @@ the chunks would lead to `unlink()`  being called on the chunk's modified
 pointers and could be exploited in the same way. These techniques both lead to a
 semi-arbitrary write, as shown in the [examples](examples).
 
+These days `unlink()` is patched. First, a small hardening check was added:
+
+    #define unlink(P, BK, FD) {
+        FD = P->fd;
+        BK = P->bk;
+        if (__builtin_expect (FD->bk != P || BK->fd != P, 0))
+            malloc_printerr (check_action, "corrupted double-linked list", P);
+        else {
+            FD->bk = BK;
+            BK->fd = FD;
+        }
+    }
+
+To check the consistency of the list. Now, even more checks are conducted.
+
 [^waf]:
     Some other texts use the phrase 'use-after-free' to refer to both reads and
     writes after a chunk is freed.
