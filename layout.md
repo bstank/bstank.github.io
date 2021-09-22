@@ -1,3 +1,4 @@
+# Layout
 A chunk that is allocated on the heap stores certain metadata about itself and
 the previous chunk. The `malloc_chunk` structure defines this, in this case from
 glibc 2.34[^1].
