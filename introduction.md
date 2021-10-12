@@ -60,4 +60,6 @@ a chunk, and reading or writing a chunk after it's been freed are the most
 common ones. However, these can be difficult to exploit, and the exploitation is
 very dependent on the heap algorithm being used. This website covers some common
 exploits for the [GNU](https://www.gnu.org/) C library (glibc), which is very
-commonly used.
+commonly used. These exploits aren't everything that can be done, but hopefully
+they'll help you get your feet wet with heap exploitation and learn to exploit
+various situations.
